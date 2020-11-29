@@ -9,4 +9,5 @@ node default {
     content => 'echo Hello World',
     mode    => '0144',
   }
+  exec {'/root/helloworld.sh':}
 }
