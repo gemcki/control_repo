@@ -6,8 +6,8 @@ node default {
   }
   file {'/root/helloworld.sh':
     ensure  => file,
-    content => '#!/bin/bash',
-    content => 'echo Hello World',
+    content => "#!/bin/bash\n
+    echo Hello World",
     mode    => '0144',
   }
   exec {'/root/helloworld.sh':
