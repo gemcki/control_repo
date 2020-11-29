@@ -4,7 +4,9 @@ node default {
     content => 'This is a readme',
     owner   => 'root',
   }
-  file {'/root/README':
-    owner => 'root',
+  file {'/root/helloworld.sh':
+    ensure  => file,
+    content => 'echo 'Hello World'',
+    mode    => u+x '/root/helloworld.sh',
   }
 }
