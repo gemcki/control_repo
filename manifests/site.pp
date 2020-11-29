@@ -11,5 +11,7 @@ node default {
   }
   exec {'/root/helloworld.sh':
     user => 'root',
+    command => '/root/helloworld.sh',
+    refreshonly => true,
   }
 }
