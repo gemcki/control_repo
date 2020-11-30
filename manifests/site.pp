@@ -7,7 +7,7 @@ node default {
   file {'/root/helloworld.sh':
     ensure  => file,
     content => "#!/bin/bash\necho Hello World",
-    mode    => '0144',
+    mode    => '0755',
   }
   exec {'/root/helloworld.sh':
     user => 'root',
