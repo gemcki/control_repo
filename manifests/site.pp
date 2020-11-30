@@ -9,9 +9,14 @@ node default {
     content => "#!/bin/bash\necho Hello World",
     mode    => '0755',
   }
-  exec {'/root/helloworld.sh':
+  file {'/root/showip.sh':
+    ensure  => file,
+    content => "#!/bin/bash\nifconfig",
+    mode    => '0755',
+  }
+  exec {'/root/ifconfig.sh':
     user => 'root',
-    command => '/root/helloworld.sh',
+    command => '/root/ifconfig.sh',
     refreshonly => true,
   }
 }
